@@ -120,26 +120,50 @@ Rather than being a simple CRUD application, this project demonstrates how a pro
 ```text
 Flask-User-Management-System/
 │
+├── .gitignore
+├── LICENSE
+├── README.md
 ├── app.py
 ├── requirements.txt
-├── README.md
-├── LICENSE
-├── .gitignore
 │
 ├── database/
 │   └── schema.sql
 │
 ├── screenshots/
+│   ├── add-product.png
+│   ├── admin-dashboard.png
+│   ├── admin-login.png
+│   ├── change-password.png
+│   ├── delete-product.png
+│   ├── edit-product.png
+│   ├── login.png
+│   ├── profile-update.png
+│   ├── register.png
+│   └── user-dashboard.png
 │
 ├── static/
 │   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── icons/
+│   │   └── style.css
+│   │
+│   └── js/
+│       ├── addProduct.js
+│       ├── admin.js
+│       ├── adminLogout.js
+│       ├── editProduct.js
+│       ├── editProfile.js
+│       ├── errorMsg.js
+│       ├── login.js
+│       ├── register.js
+│       └── userLogout.js
 │
-├── templates/
-│
-└── adminTable/
+└── templates/
+    ├── admin_login.html
+    ├── base.html
+    ├── dashboard-no-fontawesome.html
+    ├── dashboard.html
+    ├── login.html
+    ├── register.html
+    └── user_dashboard.html
 ```
 
 ---
