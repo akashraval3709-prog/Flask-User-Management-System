@@ -1,0 +1,409 @@
+.name-error,
+.email-error,
+.pass-error,
+.code-err-msg,
+.name-err-msg,
+.price-err-msg,
+.stock-err-msg,
+.FullName-err-msg,
+.phone-err-msg,
+.ecode-err-msg,
+.ename-err-msg,
+.eprice-err-msg,
+.estock-err-msg,
+.eFullName-err-msg,
+.current-passMsg,
+.new-passMsg,
+.confirm-passMsg{
+    display:block;
+    min-height:18px;      /* reserve space */
+    margin-top:4px;
+    font-size:14px;
+    font-weight:600;
+    line-height:18px;
+    color:#dc2626;
+}
+
+.phone-valid-msg{
+    display:block;
+    min-height:2px;      /* reserve space */
+    margin-top: -7px;
+    font-size:14px;
+    font-weight:600;
+    line-height:1px;
+    color:#00973a;
+}
+
+.name-error:empty,
+.email-error:empty,
+.pass-error:empty{
+    visibility:hidden;
+}
+
+.name-error:not(:empty),
+.email-error:not(:empty),
+.pass-error:not(:empty){
+    visibility:visible;
+}
+
+.btn{
+    display:block;
+    margin-top:12px !important;
+}
+
+
+.ubtn:disabled,
+.btn:disabled,
+.sbtn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.pbtn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+
+/* ===========================
+   Delete Button
+=========================== */
+
+.dbtn{
+    background:#dc2626;
+    color:#fff;
+
+    border:none;
+    border-radius:10px;
+
+    padding:12px 20px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+}
+
+.dbtn:hover{
+    background:#b91c1c;
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(220,38,38,.30);
+}
+
+.dbtn:active{
+    transform:scale(.98);
+}
+
+/* ===========================
+   Cancel Button
+=========================== */
+
+.cbtn{
+    background:#e5e7eb;
+    color:#374151;
+
+    border:none;
+    border-radius:10px;
+
+    padding:12px 20px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+}
+
+.cbtn:hover{
+    background:#d1d5db;
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,.10);
+}
+
+.cbtn:active{
+    transform:scale(.98);
+}
+
+
+
+#editModal{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+
+    z-index:9999;
+}
+
+/* Hidden */
+
+
+#deleteModal.del-hidden{
+    display: none;
+}
+#editModal.hidden{
+    display:none;
+}
+
+
+
+#editModal > div{
+
+    width:95%;
+    max-width:550px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+
+    animation:popup .25s ease;
+}
+
+
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+.code-err-msg,
+.name-err-msg,
+.price-err-msg,
+.stock-err-msg{
+
+    min-height:18px;
+
+    margin-top:4px;
+
+    color:#dc2626;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Edit Profile Modal
+=========================== */
+
+#editProfileModal{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    z-index: 9999;
+}
+
+#editProfileModal.hidden{
+    display: none;
+}
+
+#editProfileModal > div{
+    width: 95%;
+    max-width: 550px;
+
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+
+    animation: popup .25s ease;
+}
+
+#editProfileModal input{
+    transition: .25s;
+}
+
+#editProfileModal input:focus{
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+
+/* ===========================
+   Change Password Modal
+=========================== */
+
+#passwordModal{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    z-index: 9999;
+}
+
+#passwordModal.hidden{
+    display: none;
+}
+
+#passwordModal > div{
+    width: 95%;
+    max-width: 550px;
+
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+
+    animation: popup .25s ease;
+}
+
+#passwordModal input{
+    transition: .25s;
+}
+
+#passwordModal input:focus{
+    border-color: #dc2626;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220,38,38,.15);
+}
+
+
+/* ===========================
+   Shared popup animation
+=========================== */
+
+@keyframes popup{
+    from{
+        opacity: 0;
+        transform: scale(.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ===========================
+   Error / validation messages
+=========================== */
+
+.FullName-err-msg,
+.phone-err-msg{
+    display: block;
+    min-height: 18px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #dc2626;
+}
+
+.phone-valid-msg{
+    display: block;
+    min-height: 2px;
+    margin-top: -7px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1px;
+    color: #00973a;
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+.sbtn:disabled{
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.cbtn{
+    transition: all .25s ease;
+}
+
+.cbtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.10);
+}
+
+.cbtn:active{
+    transform: scale(.98);
+}
+
+
+
+#editModal input{
+
+    transition:.25s;
+
+}
+
+#editModal input:focus{
+
+    border-color:#2563eb;
+
+    outline:none;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
